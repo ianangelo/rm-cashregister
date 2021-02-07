@@ -53,6 +53,7 @@ Enter command:
 Enter amount: 
 ###### 24  ######
 1 0 0 2 0
+
 $42 0 2 3 2 3
 ********************************
 Select an action: 
