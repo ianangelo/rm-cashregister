@@ -2,14 +2,17 @@ package com.rocketmiles.cashregister;
 
 import java.util.Scanner;
 
-import com.rocketmiles.cashregister.helper.CashRegisterHelper;
 import com.rocketmiles.cashregister.helper.InputReader;
+import com.rocketmiles.cashregister.model.CashRegister;
+import com.rocketmiles.cashregister.service.CashRegisterService;
+import com.rocketmiles.cashregister.service.CashRegisterServiceImpl;
 
 public class CashRegisterApp {
 
 	public static void main(String[] args) {
 		
-		CashRegisterHelper helper = new CashRegisterHelper();
+		CashRegister cashRegister = new CashRegister();
+		CashRegisterService service = new CashRegisterServiceImpl();
 		Scanner sc = new Scanner(System.in);
 		
 		boolean running = true;
@@ -17,21 +20,21 @@ public class CashRegisterApp {
 		while (running) {
 			showMenu();
 			String selection = InputReader.readMenuSelection(sc);
-			if (selection.equalsIgnoreCase(InputReader.MENU_SHOW)) {
-				System.out.println(helper.getCurrentState());
-			} else if (selection.equalsIgnoreCase(InputReader.MENU_PUT)) {
+			if (selection.equalsIgnoreCase("show")) {
+				System.out.println(service.getCurrentState(cashRegister));
+			} else if (selection.equalsIgnoreCase("put")) {
 				int[] inputBills = InputReader.readArrayInput(sc);
-				helper.putBills(inputBills);
-				System.out.println(helper.getCurrentState());
-			} else if (selection.equalsIgnoreCase(InputReader.MENU_TAKE)) {
+				service.putBills(cashRegister, inputBills);
+				System.out.println(service.getCurrentState(cashRegister));
+			} else if (selection.equalsIgnoreCase("take")) {
 				int[] inputBills = InputReader.readArrayInput(sc);
-				helper.takeBills(inputBills);
-				System.out.println(helper.getCurrentState());
-			} else if (selection.equalsIgnoreCase(InputReader.MENU_CHANGE)) {
+				service.takeBills(cashRegister, inputBills);
+				System.out.println(service.getCurrentState(cashRegister));
+			} else if (selection.equalsIgnoreCase("change")) {
 				int amount = InputReader.readIntInput(sc);
-				System.out.println(helper.getChange(amount));
-				System.out.println(helper.getCurrentState());
-			} else if (selection.equalsIgnoreCase(InputReader.MENU_QUIT)) {
+				System.out.println(service.getChange(cashRegister, amount));
+				System.out.println(service.getCurrentState(cashRegister));
+			} else if (selection.equalsIgnoreCase("quit")) {
 				running = false;
 				sc.close();
 				System.out.println("Session has been closed. Thanks for using this app.");
@@ -41,8 +44,6 @@ public class CashRegisterApp {
 			}
 		}
 		
-		
-	
 		
 	}
 	

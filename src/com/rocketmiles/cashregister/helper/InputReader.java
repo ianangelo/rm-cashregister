@@ -4,12 +4,6 @@ import java.util.Scanner;
 
 public class InputReader {
 	
-	public static final String MENU_SHOW 	= "show";
-	public static final String MENU_PUT 	= "put";
-	public static final String MENU_TAKE 	= "take";
-	public static final String MENU_CHANGE 	= "change";
-	public static final String MENU_QUIT 	= "quit";
-	
 	public static int[] readArrayInput(Scanner s) {
 		System.out.println("Enter number of bills per denomination:");
 
