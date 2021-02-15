@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.rocketmiles.cashregister.model.CashRegister;
+import com.rocketmiles.cashregister.data.CashRegister;
 
 public class CashRegisterHelper {
 

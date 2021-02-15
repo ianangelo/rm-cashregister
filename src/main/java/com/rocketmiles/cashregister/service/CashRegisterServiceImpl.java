@@ -10,8 +10,8 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import com.rocketmiles.cashregister.data.CashRegister;
 import com.rocketmiles.cashregister.helper.CashRegisterHelper;
-import com.rocketmiles.cashregister.model.CashRegister;
 
 public class CashRegisterServiceImpl implements CashRegisterService {
 

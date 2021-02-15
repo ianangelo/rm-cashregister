@@ -2,8 +2,8 @@ package com.rocketmiles.cashregister;
 
 import java.util.Scanner;
 
+import com.rocketmiles.cashregister.data.CashRegister;
 import com.rocketmiles.cashregister.helper.InputReader;
-import com.rocketmiles.cashregister.model.CashRegister;
 import com.rocketmiles.cashregister.service.CashRegisterService;
 import com.rocketmiles.cashregister.service.CashRegisterServiceImpl;
 

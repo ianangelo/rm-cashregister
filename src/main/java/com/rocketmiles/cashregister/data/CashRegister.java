@@ -1,4 +1,4 @@
-package com.rocketmiles.cashregister.model;
+package com.rocketmiles.cashregister.data;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;

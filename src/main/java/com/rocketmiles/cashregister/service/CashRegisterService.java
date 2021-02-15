@@ -1,6 +1,6 @@
 package com.rocketmiles.cashregister.service;
 
-import com.rocketmiles.cashregister.model.CashRegister;
+import com.rocketmiles.cashregister.data.CashRegister;
 
 public interface CashRegisterService {
 	public String getCurrentState(CashRegister cashReg);
