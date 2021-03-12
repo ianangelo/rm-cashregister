@@ -1,7 +1,7 @@
 # rm-cashregister
 Cash Register App
 
-# RocketM - Cash Register #
+# Cash Register - Coins Change Problem - with Denominations and Limited Coins Availability#
 
 A simple cash register apps that accepts bills in the following denominations: 20, 10, 5, 2, 1
 
