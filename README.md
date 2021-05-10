@@ -1,5 +1,5 @@
 # rm-cashregister
-Cash Register App
+Cash Register - Coins Change Problem - with Denominations and Limited Coins Availability
 
 # Cash Register - Coins Change Problem - with Denominations and Limited Coins Availability#
 
